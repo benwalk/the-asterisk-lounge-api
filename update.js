@@ -6,7 +6,7 @@ export async function main(event, context, callback) {
     const data = JSON.parse(event.body);
 
     const params = {
-        TableName: "the-asterisk-lounge-games",
+        TableName: process.env.tableName,
         Key: {
             userId: event.requestContext.identity.cognitoIdentityId,
             gameId: event.pathParameters.id
