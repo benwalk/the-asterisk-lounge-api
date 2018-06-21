@@ -5,7 +5,6 @@ AWS.config.update({ region: "us-west-2" });
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 export function main(event, context, callback) {
-  gibberish.what;
 
   // Request body is passed in as a JSON encoded string in 'event.body'
   const data = JSON.parse(event.body);
